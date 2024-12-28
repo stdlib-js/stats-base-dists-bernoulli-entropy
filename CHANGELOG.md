@@ -2,6 +2,63 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2024-12-28)
+
+<section class="features">
+
+### Features
+
+-   [`08c0de6`](https://github.com/stdlib-js/stdlib/commit/08c0de6c2ff48936b0fc0e364dfd0f2c40e5083f) - add C implementation for `stats/base/dists/bernoulli/entropy` [(#3449)](https://github.com/stdlib-js/stdlib/pull/3449)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3412](https://github.com/stdlib-js/stdlib/issues/3412)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`08c0de6`](https://github.com/stdlib-js/stdlib/commit/08c0de6c2ff48936b0fc0e364dfd0f2c40e5083f) - **feat:** add C implementation for `stats/base/dists/bernoulli/entropy` [(#3449)](https://github.com/stdlib-js/stdlib/pull/3449) _(by Vivek maurya, Philipp Burckhardt, stdlib-bot)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Philipp Burckhardt
+-   Vivek maurya
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-27)
