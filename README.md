@@ -62,38 +62,32 @@ where `p` is the success probability and `q = 1 - p`.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-bernoulli-entropy
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-entropy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var entropy = require( 'path/to/vendor/umd/stats-base-dists-bernoulli-entropy/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.entropy;
-})();
-</script>
+var entropy = require( '@stdlib/stats-base-dists-bernoulli-entropy' );
 ```
 
 #### entropy( p )
@@ -141,15 +135,10 @@ v = entropy( -1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var entropy = require( '@stdlib/stats-base-dists-bernoulli-entropy' );
 
 var opts = {
     'dtype': 'float64'
@@ -157,11 +146,6 @@ var opts = {
 var p = uniform( 25, 0.0, 1.0, opts );
 
 logEachMap( 'p: %0.4f, H(X;p): %0.4f', p, entropy );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -178,7 +162,90 @@ logEachMap( 'p: %0.4f, H(X;p): %0.4f', p, entropy );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/bernoulli/entropy.h"
+```
+
+#### stdlib_base_dists_bernoulli_entropy( p )
+
+Returns the [entropy][entropy] of a [Bernoulli][bernoulli-distribution] distribution with success probability `p` (in [nats][nats]).
+
+```c
+double out = stdlib_base_dists_bernoulli_entropy( 0.1 );
+// returns ~0.325
+```
+
+The function accepts the following arguments:
+
+-   **p**: `[in] double` success probability.
+
+```c
+double stdlib_base_dists_bernoulli_entropy( const double p );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/bernoulli/entropy.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void ) {
+    double p;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        p = (double)rand() / ( (double)RAND_MAX + 1.0 );
+        y = stdlib_base_dists_bernoulli_entropy( p );
+        printf( "x: %lf, H(X;p): %lf\n", p, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -214,7 +281,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -240,8 +307,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
