@@ -69,7 +69,7 @@ where `p` is the success probability and `q = 1 - p`.
 ## Usage
 
 ```javascript
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@deno/mod.js';
+import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@v0.3.1-deno/mod.js';
 ```
 
 #### entropy( p )
@@ -120,7 +120,7 @@ v = entropy( -1.0 );
 ```javascript
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@deno/mod.js';
+import entropy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bernoulli-entropy@v0.3.1-deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
