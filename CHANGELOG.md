@@ -4,7 +4,19 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-31)
+## Unreleased (2026-11-14)
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#16585](https://github.com/stdlib-js/stdlib/issues/16585)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +24,7 @@
 
 <details>
 
+-   [`44c4f25`](https://github.com/stdlib-js/stdlib/commit/44c4f255aef7e272827a76535fe97a80b466c878) - **chore:** fix EditorConfig lint errors [(#16587)](https://github.com/stdlib-js/stdlib/pull/16587) _(by Hayabusa)_
 -   [`28a24a0`](https://github.com/stdlib-js/stdlib/commit/28a24a0ff1e1f1a7df0d87582158f253bd7aedf3) - **test:** migrate `stats/base/dists/bernoulli/entropy` to ULP-based assertions [(#15305)](https://github.com/stdlib-js/stdlib/pull/15305) _(by Athan Reines)_
 -   [`ee1f1a7`](https://github.com/stdlib-js/stdlib/commit/ee1f1a7b7d7de0dba506731a05698e0bb43b2d1c) - **docs:** fix wrong section order in `stats/base/dists` and `stats/strided` READMEs _(by Philipp Burckhardt)_
 -   [`f38e8a7`](https://github.com/stdlib-js/stdlib/commit/f38e8a7b433e0e9888eb57c83f4374073089ad85) - **docs:** clean-up parameters in Julia fixtures scripts _(by Philipp Burckhardt)_
@@ -26,9 +39,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Hayabusa
 -   Philipp Burckhardt
 
 </section>
